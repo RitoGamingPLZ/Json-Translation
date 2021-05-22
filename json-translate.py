@@ -1,6 +1,7 @@
 from multiprocessing import Process, Pool, cpu_count, Value, Manager
 from deep_translator import GoogleTranslator
-from flatten_json import flatten, unflatten_list
+# from flatten_json import flatten, unflatten_list
+from json_flatten import flatten, unflatten
 from itertools import islice, chain
 from functools import partial
 import json 
@@ -56,14 +57,14 @@ with open(argv[1]) as input:
     manager = Manager()
     # lock = manager.Lock()
     progress = Value('i', 0)
-    flatten_data = manager.dict(flatten(data, '#'))
+    flatten_data = manager.dict(flatten(data))
     chunk_data_set = split_dict_to_multiple(flatten_data, 64)
     cpus = cpu_count()
     pool = Pool(cpus)
     multi_translate = partial(tranlate,target = flatten_data, src = argv[3], dest = argv[4], batch=len(chunk_data_set))
     pool.map(multi_translate, chunk_data_set)
 
-translated_json = unflatten_list(flatten_data.copy(), '#')
+translated_json = unflatten(flatten_data.copy())
 
 with open(argv[2], 'w+') as output:
     json.dump(translated_json, output, indent=4, ensure_ascii=False)

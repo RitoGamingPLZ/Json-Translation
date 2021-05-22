@@ -60,7 +60,7 @@ with open(argv[1]) as input:
     chunk_data_set = split_dict_to_multiple(flatten_data, 64)
     cpus = cpu_count()
     pool = Pool(cpus)
-    multi_translate = partial(tranlate,target = flatten_data, src = 'en', dest = argv[3], batch=len(chunk_data_set))
+    multi_translate = partial(tranlate,target = flatten_data, src = argv[3], dest = argv[4], batch=len(chunk_data_set))
     pool.map(multi_translate, chunk_data_set)
 
 translated_json = unflatten_list(flatten_data.copy(), '#')

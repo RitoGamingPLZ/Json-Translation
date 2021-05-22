@@ -24,4 +24,6 @@ However the parent.py will detect whether phrase exist illegal character such as
 
 
 ## How to use
+```
 python json-translate.py input-filename output-filename lang-code
+```

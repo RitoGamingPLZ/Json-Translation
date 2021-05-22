@@ -6,7 +6,7 @@ this project aims to translate the json content into different langs using googl
 -deep_translator (https://github.com/nidhaloff/deep-translator)
 install them using 
 ```
-  pip install flatten_json
+  pip install json_flatten
   pip install -U deep_translator
 ```
 

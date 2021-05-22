@@ -7,4 +7,4 @@ this project to translate the json content into different langs using google tra
 -googletrans 
 
 ## How to use
-python json-translate.py input-filename output-filename list-of-lang-code
+python json-translate.py input-filename output-filename lang-code

@@ -1,7 +1,7 @@
-# Json-Translator
+## Json-Translator
 this project aims to translate the json content into different langs using google translation
 
-## Requirement library
+### Requirement library
 -flatten_json (https://github.com/amirziai/flatten)
 -deep_translator (https://github.com/nidhaloff/deep-translator)
 install them using 
@@ -23,7 +23,7 @@ this project first flatten json content into a list, then all elements combine i
 However the parent.py will detect whether phrase exist illegal character such as '\n', so we nned to remove it
 
 
-## How to use
+### How to use
 ```
 python json-translate.py input-filename output-filename lang-code
 ```

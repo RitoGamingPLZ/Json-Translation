@@ -3,6 +3,7 @@ this project to translate the json content into different langs using google tra
 
 ## Requirement library
 -flatten_json (https://github.com/amirziai/flatten)
+
 -googletrans 
 
 ## How to use

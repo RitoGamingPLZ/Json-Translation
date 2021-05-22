@@ -1,5 +1,5 @@
 # Json-Translator
-this project to translate the json content into different langs using google translation
+this project aims to translate the json content into different langs using google translation
 
 ## Requirement library
 -flatten_json (https://github.com/amirziai/flatten)
